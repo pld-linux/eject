@@ -26,12 +26,30 @@ diff -u eject-2.0.13/po.orig/zh_TW.Big5.po eject-2.0.13/po/zh_TW.Big5.po
  
  #: ../eject.c:110 ../eject.c:893
  #, c-format
+@@ -46,7 +46,7 @@
+ "  eject -V\t\t\t\t-- 顯示版本後結束\n"
+ "  eject [-vnrsfq] [<name>]\t\t-- 跳出設備\n"
+ "  eject [-vn] -d\t\t\t-- 顯示內定設備名稱\n"
+-"  eject [-vn] -a on|off|1|0 [<name>]\t-- 自動跳出功\能開關\n"
++"  eject [-vn] -a on|off|1|0 [<name>]\t-- 自動跳出功能開關\n"
+ "  eject [-vn] -c <slot> [<name>]\t-- 切換光碟櫃內的光碟片\n"
+ "  eject [-vn] -t [<name>]\t\t-- 關閉拖盤\n"
+ "  eject [-vn] -x <speed> [<name>]\t-- 設定光碟機最快速度\n"
+@@ -84,7 +84,7 @@
+ msgstr ""
+ "參數 <name> 可以是設備檔名或者掛載點。\n"
+ "不加參數時，內定為 `%s'。\n"
+-"程式預設會依序測試 -r, -s, -f, 和 -q 直到成功\。\n"
++"程式預設會依序測試 -r, -s, -f, 和 -q 直到成功。\n"
+ 
+ #: ../eject.c:193
+ #, c-format
 @@ -299,7 +299,7 @@
  #: ../eject.c:963
  #, c-format
  msgid "%s: CD-ROM eject command succeeded\n"
 -msgstr "%s: 光碟片跳出指令成功\\n"
-+msgstr "%s: 光碟片跳出指令成功\ \n"
++msgstr "%s: 光碟片跳出指令成功\n"
  
  #: ../eject.c:965
  #, c-format
@@ -40,7 +58,7 @@ diff -u eject-2.0.13/po.orig/zh_TW.Big5.po eject-2.0.13/po/zh_TW.Big5.po
  #, c-format
  msgid "%s: SCSI eject succeeded\n"
 -msgstr "%s: SCSI 跳出成功\\n"
-+msgstr "%s: SCSI 跳出成功\ \n"
++msgstr "%s: SCSI 跳出成功\n"
  
  #: ../eject.c:977
  #, c-format
@@ -49,7 +67,7 @@ diff -u eject-2.0.13/po.orig/zh_TW.Big5.po eject-2.0.13/po/zh_TW.Big5.po
  #, c-format
  msgid "%s: floppy eject command succeeded\n"
 -msgstr "%s: 軟碟跳出命令成功\\n"
-+msgstr "%s: 軟碟跳出命令成功\ \n"
++msgstr "%s: 軟碟跳出命令成功\n"
  
  #: ../eject.c:989
  #, c-format
