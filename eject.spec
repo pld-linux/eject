@@ -71,8 +71,8 @@ Iomega Jaz чи Zip диски, флоп╕-диски на SPARC-машинах). Eject може
 rm -f missing
 gettextize --copy --force
 aclocal
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
