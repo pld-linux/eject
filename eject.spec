@@ -4,12 +4,13 @@ Summary(fr): éjecte un support éjectable et commande l'éjection automatique
 Summary(tr): Eject yeteneði olan aygýtlarý kontrol eder
 Name:        eject
 Version:     1.5
-Release:     5
+Release:     6
 Copyright:   GPL
 Group:       Utilities/System
 Source:      ftp://sunsite.unc.edu/pub/Linux/utils/disk-management/%{name}-%{version}.tar.gz
-Patch0:      eject-1.4-make.patch
-Patch1:      eject-1.5-device.patch
+Patch0:      eject-make.patch
+Patch1:      eject-device.patch
+Patch2:      eject-kernel21.patch
 BuildRoot:   /tmp/%{name}-%{version}-root
 
 %description
@@ -35,6 +36,7 @@ sürücüleri ve bazý disket sürücüleri yer alýr.
 %setup -q
 %patch0 -p1
 %patch1 -p0
+%patch2 -p0
 
 %build
 make
@@ -53,9 +55,13 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644, root, root, 755)
 %doc README ChangeLog
 %attr(755, root, root) /usr/bin/eject
-%attr(644, root,  man) /usr/man/man1/eject.1
+%attr(644, root,  man) /usr/man/man1/*
 
 %changelog
+* Fri Dec 3 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
+  [1.5-6]
+- added patch for proper compilation on kernel 2.1.x.
+
 * Mon Sep 28 1998 Marcin 'Qrczak' Kowalczyk <qrczak@knm.org.pl>
   [1.5-5]
 - use %%{name} and %%{version} macros,
