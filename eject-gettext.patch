@@ -1,0 +1,10 @@
+--- eject-2.0.12/configure.in.wiget	Tue Oct  2 00:48:32 2001
++++ eject-2.0.12/configure.in	Mon Jan  6 01:13:08 2003
+@@ -20,5 +20,7 @@
+ AC_CHECK_FUNCS(regcomp strdup strerror)
+ 
+ AC_SUBST(DEFAULTDEVICE)
++AM_GNU_GETTEXT([external])
++AM_GNU_GETTEXT_VERSION(0.11.5)
+ 
+ AC_OUTPUT(Makefile)
