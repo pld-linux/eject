@@ -13,7 +13,9 @@ Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	http://www.pobox.com/~tranter/%{name}-%{version}.tar.gz
+# Source0-md5: b796ad77beb4e7bdd08d6149701ab778
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
+# Source1-md5: dd66d948c94fe0f0b4483c51873e6e20
 Source2:	%{name}-pl.po
 Patch0:		%{name}-gettext.patch
 URL:		http://sourceforge.net/projects/eject/
