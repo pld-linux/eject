@@ -11,7 +11,7 @@ Group:		Utilities/System
 Group(pl):	Narzêdzia/System
 Source:		http://metalab.unc.edu/pub/Linux/utils/disk-management/%{name}-%{version}.tar.gz
 URL:		http://www.pobox.com/~tranter/eject.html
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This program allows the user to eject media that is autoejecting like
