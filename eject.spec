@@ -50,7 +50,7 @@ CD-ROM'lar, Zip sürücüleri ve bazý disket sürücüleri yer alýr.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install eject volname $RPM_BUILD_ROOT%{_bindir}/eject
+install eject volname $RPM_BUILD_ROOT%{_bindir}
 install eject.1 $RPM_BUILD_ROOT%{_mandir}/man1/eject.1
 
 gzip -9nf README ChangeLog
