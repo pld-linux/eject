@@ -26,3 +26,30 @@ diff -u eject-2.0.13/po.orig/zh_TW.Big5.po eject-2.0.13/po/zh_TW.Big5.po
  
  #: ../eject.c:110 ../eject.c:893
  #, c-format
+@@ -299,7 +299,7 @@
+ #: ../eject.c:963
+ #, c-format
+ msgid "%s: CD-ROM eject command succeeded\n"
+-msgstr "%s: 光碟片跳出指令成功\\n"
++msgstr "%s: 光碟片跳出指令成功\ \n"
+ 
+ #: ../eject.c:965
+ #, c-format
+@@ -314,7 +314,7 @@
+ #: ../eject.c:975
+ #, c-format
+ msgid "%s: SCSI eject succeeded\n"
+-msgstr "%s: SCSI 跳出成功\\n"
++msgstr "%s: SCSI 跳出成功\ \n"
+ 
+ #: ../eject.c:977
+ #, c-format
+@@ -329,7 +329,7 @@
+ #: ../eject.c:987
+ #, c-format
+ msgid "%s: floppy eject command succeeded\n"
+-msgstr "%s: 軟碟跳出命令成功\\n"
++msgstr "%s: 軟碟跳出命令成功\ \n"
+ 
+ #: ../eject.c:989
+ #, c-format
