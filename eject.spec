@@ -17,8 +17,9 @@ Source0:	http://www.pobox.com/~tranter/%{name}-%{version}.tar.gz
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 Patch0:		%{name}-DESTDIR_fix.patch
 URL:		http://sourceforge.net/projects/eject/
-BuildRequires:	automake
 BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -71,7 +72,7 @@ Iomega Jaz чи Zip диски, флоп╕-диски на SPARC-машинах). Eject може
 %build
 rm -f missing
 %{__gettextize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
@@ -84,14 +85,12 @@ rm -rf $RPM_BUILD_ROOT
 
 bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
 
-gzip -9nf AUTHORS ChangeLog NEWS PORTING PROBLEMS README TODO
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS ChangeLog NEWS PORTING PROBLEMS README TODO
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 %lang(fi) %{_mandir}/fi/man1/*
