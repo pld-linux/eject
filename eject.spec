@@ -4,15 +4,15 @@ Summary(fr):	éjecte un support éjectable et commande l'éjection automatique
 Summary(pl):	Eject otwieranie szuflad CDROM, Jaz, ZIP i innych
 Summary(tr):	Eject yeteneði olan aygýtlarý kontrol eder
 Name:		eject
-Version:	2.0.7
+Version:	2.0.8
 Release:	1
 License:	GPL
 Group:		Applications/System
 Group(de):	Applikationen/System
 Group(pl):	Aplikacje/System
-Source0:	http://metalab.unc.edu/pub/Linux/utils/disk-management/%{name}-%{version}.tar.gz
+Source0:	http://members.home.net/jefftranter/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ignorecomments.patch
-URL:		http://www.pobox.com/~tranter/eject.html
+URL:		http://members.home.net/jefftranter/eject.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
