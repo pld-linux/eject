@@ -71,7 +71,7 @@ Iomega Jaz чи Zip диски, флоп╕-диски на SPARC-машинах). Eject може
 %setup -q
 %patch0 -p1
 
-# standardize locale names
+# standarize locale names
 mv -f po/{de_DE,de}.po
 mv -f po/{fr_FR,fr}.po
 mv -f po/{ja_JP.eucJP,ja}.po
