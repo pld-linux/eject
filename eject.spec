@@ -11,8 +11,9 @@ Name:		eject
 Version:	2.0.12
 Release:	5
 License:	GPL
+Vendor:		Jeff Tranter <tranter@users.sourceforge.net>
 Group:		Applications/System
-Source0:	http://members.home.net/jefftranter/%{name}-%{version}.tar.gz
+Source0:	http://www.pobox.com/~tranter/%{name}-%{version}.tar.gz
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 Patch0:		%{name}-DESTDIR_fix.patch
 URL:		http://sourceforge.net/projects/eject/
