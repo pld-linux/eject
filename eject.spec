@@ -4,8 +4,8 @@ Summary(fr):	éjecte un support éjectable et commande l'éjection automatique
 Summary(pl):	Eject otwieranie szuflad CDROM, Jaz, ZIP i innych
 Summary(tr):	Eject yeteneði olan aygýtlarý kontrol eder
 Name:		eject
-Version:	2.0.5
-Release:	3
+Version:	2.0.6
+Release:	1
 License:	GPL
 Group:		Applications/System
 Group(de):	Applikationen/System
@@ -43,17 +43,15 @@ CD-ROM'lar, Zip sürücüleri ve bazý disket sürücüleri yer alýr.
 %patch -p1
 
 %build
-%{__make} CFLAGS="-Wall %{rpmcflags}"
-%{__cc} %{rpmcflags} volname.c -o volname  
+%configure
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install eject volname $RPM_BUILD_ROOT%{_bindir}
-install eject.1 $RPM_BUILD_ROOT%{_mandir}/man1/eject.1
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf README ChangeLog
+gzip -9nf AUTHORS ChangeLog NEWS PORTING PROBLEMS README TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
