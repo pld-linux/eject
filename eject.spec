@@ -15,7 +15,6 @@ Group:		Applications/System
 Source0:	http://www.pobox.com/~tranter/%{name}-%{version}.tar.gz
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 Source2:	%{name}-pl.po
-Patch0:		%{name}-gettext.patch
 URL:		http://sourceforge.net/projects/eject/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -67,7 +66,6 @@ Iomega Jaz чи Zip диски, флоп╕-диски на SPARC-машинах). Eject може
 
 %prep
 %setup -q
-%patch0 -p1
 
 # standardize locale names
 mv -f po/{de_DE,de}.po
@@ -80,7 +78,7 @@ cp %{SOURCE2} po/pl.po
 %build
 rm -f missing
 %{__gettextize}
-%{__aclocal} -I m4
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
