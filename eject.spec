@@ -44,7 +44,7 @@ CD-ROM'lar, Zip sürücüleri ve bazý disket sürücüleri yer alýr.
 
 %build
 %{__make} CFLAGS="-Wall %{rpmcflags}"
-%{__cc} %{rpmcflags}" volname.c -o volname  
+%{__cc} %{rpmcflags} volname.c -o volname  
 
 %install
 rm -rf $RPM_BUILD_ROOT
