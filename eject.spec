@@ -5,11 +5,12 @@ Summary(pl):	Eject otwieranie szuflad CDROM, Jaz, ZIP i innych
 Summary(tr):	Eject yeteneði olan aygýtlarý kontrol eder
 Name:		eject
 Version:	2.0.2
-Release:	3
+Release:	4
 Copyright:	GPL
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
 Source:		http://metalab.unc.edu/pub/Linux/utils/disk-management/%{name}-%{version}.tar.gz
+URL:		http://www.pobox.com/~tranter/eject.html
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -43,7 +44,7 @@ make CFLAGS="-Wall $RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/{bin,man/man1}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 install -s eject $RPM_BUILD_ROOT%{_bindir}/eject
 install eject.1 $RPM_BUILD_ROOT%{_mandir}/man1/eject.1
@@ -61,38 +62,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/*
 
 %changelog
-* Thu Mar 25 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [2.0.2-3]
-- removed man group from man pages,
-- changed base Source url,
-- added Group(pl),
-- gzipping man pages.
-
-* Fri Dec 3 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [1.5-6d]
-- added patch for proper compilation on kernel 2.1.x.
-- build for Tornado,
-- some changes...
-
-* Mon Sep 28 1998 Marcin 'Qrczak' Kowalczyk <qrczak@knm.org.pl>
-  [1.5-5]
-- use %%{name} and %%{version} macros,
-- added full %attr description in %files,
-- `mkdir -p' replaced with more standard `install -d'.
-
-* Tue Aug  4 1998 Jeff Johnson <jbj@redhat.com>
-- build root
-
-* Wed Jul 15 1998 Donnie Barnes <djb@redhat.com>
-- added small patch to 1.5 for longer device names
-
-* Mon Apr 27 1998 Prospector System <bugs@redhat.com>
-- translations modified for de, fr, tr
-
-* Wed Oct 15 1997 Donnie Barnes <djb@redhat.com>
-- upgraded to 1.5
-- various spec file clean ups
-- eject rocks!
-
-* Mon Jun 02 1997 Erik Troan <ewt@redhat.com>
-- built against glibc.
+* Sun May 30 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
+  [2.0.2-4]
+- based on RH spec,
+- spec rewrited by PLD team.
