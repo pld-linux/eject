@@ -60,9 +60,3 @@ rm -rf $RPM_BUILD_ROOT
 
 %attr(755,root,root) %{_bindir}/eject
 %{_mandir}/man1/*
-
-%changelog
-* Sun May 30 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [2.0.2-4]
-- based on RH spec,
-- spec rewrited by PLD team.
