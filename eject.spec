@@ -11,7 +11,6 @@ Name:		eject
 Version:	2.0.12
 Release:	6
 License:	GPL
-Vendor:		Jeff Tranter <tranter@users.sourceforge.net>
 Group:		Applications/System
 Source0:	http://www.pobox.com/~tranter/%{name}-%{version}.tar.gz
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
@@ -87,12 +86,12 @@ rm -rf $RPM_BUILD_ROOT
 
 bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
 
-%find_lang eject
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f eject.lang
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS PORTING PROBLEMS README TODO
 %attr(755,root,root) %{_bindir}/*
