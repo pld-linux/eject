@@ -46,9 +46,9 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/usr/{bin,man/man1}
 
 install -s eject $RPM_BUILD_ROOT/usr/bin/eject
-install eject.1 $RPM_BUILD_ROOT/usr/man/man1/eject.1
+install eject.1 $RPM_BUILD_ROOT%{_mandir}/man1/eject.1
 
-gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/* \
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	README ChangeLog
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -58,7 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 
 %attr(755,root,root) /usr/bin/eject
-/usr/man/man1/*
+%{_mandir}/man1/*
 
 %changelog
 * Thu Mar 25 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
