@@ -18,6 +18,7 @@ Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-ma
 # Source1-md5: dd66d948c94fe0f0b4483c51873e6e20
 Source2:	%{name}-pl.po
 Patch0:		%{name}-gettext.patch
+Patch1:		%{name}-includes.patch
 URL:		http://eject.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -70,6 +71,7 @@ Iomega Jaz чи Zip диски, флоп╕-диски на SPARC-машинах). Eject може
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 # standardize locale names
 mv -f po/{de_DE,de}.po
