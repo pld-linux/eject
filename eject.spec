@@ -5,10 +5,11 @@ Summary(pl):	Eject otwieranie szuflad CDROM, Jaz, ZIP i innych
 Summary(tr):	Eject yeteneði olan aygýtlarý kontrol eder
 Name:		eject
 Version:	2.0.2
-Release:	4
+Release:	7
 License:	GPL
-Group:		Utilities/System
-Group(pl):	Narzêdzia/System
+Group:		Applications/System
+Group(de):	Applikationen/System
+Group(pl):	Aplikacje/System
 Source0:	http://metalab.unc.edu/pub/Linux/utils/disk-management/%{name}-%{version}.tar.gz
 URL:		http://www.pobox.com/~tranter/eject.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -40,23 +41,22 @@ CD-ROM'lar, Zip sürücüleri ve bazý disket sürücüleri yer alýr.
 %setup -q
 
 %build
-%{__make} CFLAGS="-Wall $RPM_OPT_FLAGS"
+%{__make} CFLAGS="-Wall %{?debug:-O -g}%{!?debug:$RPM_OPT_FLAGS}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install -s eject $RPM_BUILD_ROOT%{_bindir}/eject
+install eject $RPM_BUILD_ROOT%{_bindir}/eject
 install eject.1 $RPM_BUILD_ROOT%{_mandir}/man1/eject.1
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	README ChangeLog
+gzip -9nf README ChangeLog
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 %doc *.gz
-
 %attr(755,root,root) %{_bindir}/eject
 %{_mandir}/man1/*
