@@ -5,12 +5,13 @@ Summary(pl):	Eject otwieranie szuflad CDROM, Jaz, ZIP i innych
 Summary(tr):	Eject yeteneði olan aygýtlarý kontrol eder
 Name:		eject
 Version:	2.0.12
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Group(de):	Applikationen/System
 Group(pl):	Aplikacje/System
 Source0:	http://members.home.net/jefftranter/%{name}-%{version}.tar.gz
+Source1:	%{name}-non-english-man-pages.tar.bz2
 Patch0:		%{name}-DESTDIR_fix.patch
 URL:		http://sourceforge.net/projects/eject/
 BuildRequires:	automake
@@ -58,6 +59,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
+bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
+
 gzip -9nf AUTHORS ChangeLog NEWS PORTING PROBLEMS README TODO
 
 %clean
@@ -68,3 +71,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
+%lang(fi) %{_mandir}/fi/man1/*
+%lang(hu) %{_mandir}/hu/man1/*
+%lang(ja) %{_mandir}/ja/man1/*
+%lang(pl) %{_mandir}/pl/man1/*
