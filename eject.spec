@@ -45,7 +45,7 @@ make CFLAGS="-Wall $RPM_OPT_FLAGS"
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/usr/{bin,man/man1}
 
-install -s eject $RPM_BUILD_ROOT/usr/bin/eject
+install -s eject $RPM_BUILD_ROOT%{_bindir}/eject
 install eject.1 $RPM_BUILD_ROOT%{_mandir}/man1/eject.1
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
@@ -57,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 
-%attr(755,root,root) /usr/bin/eject
+%attr(755,root,root) %{_bindir}/eject
 %{_mandir}/man1/*
 
 %changelog
