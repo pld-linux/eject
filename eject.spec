@@ -4,14 +4,15 @@ Summary(fr):	éjecte un support éjectable et commande l'éjection automatique
 Summary(pl):	Eject otwieranie szuflad CDROM, Jaz, ZIP i innych
 Summary(tr):	Eject yeteneði olan aygýtlarý kontrol eder
 Name:		eject
-Version:	2.0.9
-Release:	4
+Version:	2.0.12
+Release:	1
 License:	GPL
 Group:		Applications/System
 Group(de):	Applikationen/System
 Group(pl):	Aplikacje/System
 Source0:	http://members.home.net/jefftranter/%{name}-%{version}.tar.gz
-URL:		http://members.home.net/jefftranter/eject.html
+Patch0:		%{name}-DESTDIR_fix.patch
+URL:		http://sourceforge.net/projects/eject/
 BuildRequires:	automake
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -41,9 +42,11 @@ CD-ROM'lar, Zip sürücüleri ve bazý disket sürücüleri yer alýr.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 rm -f missing
+gettextize --copy --force
 aclocal
 autoconf
 automake -a -c
