@@ -5,12 +5,13 @@ Summary(pl):	Eject otwieranie szuflad CDROM, Jaz, ZIP i innych
 Summary(tr):	Eject yeteneði olan aygýtlarý kontrol eder
 Name:		eject
 Version:	2.0.5
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Group(de):	Applikationen/System
 Group(pl):	Aplikacje/System
 Source0:	http://metalab.unc.edu/pub/Linux/utils/disk-management/%{name}-%{version}.tar.gz
+Patch0:		%{name}-ignorecomments.patch
 URL:		http://www.pobox.com/~tranter/eject.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -39,6 +40,7 @@ CD-ROM'lar, Zip sürücüleri ve bazý disket sürücüleri yer alýr.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 %{__make} CFLAGS="-Wall %{rpmcflags}"
