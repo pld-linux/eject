@@ -5,13 +5,15 @@ Summary(pl):	Eject otwieranie szuflad CDROM, Jaz, ZIP i innych
 Summary(tr):	Eject yeteneði olan aygýtlarý kontrol eder
 Name:		eject
 Version:	2.0.9
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/System
 Group(de):	Applikationen/System
 Group(pl):	Aplikacje/System
 Source0:	http://members.home.net/jefftranter/%{name}-%{version}.tar.gz
 URL:		http://members.home.net/jefftranter/eject.html
+BuildRequires:	automake
+BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -41,8 +43,10 @@ CD-ROM'lar, Zip sürücüleri ve bazý disket sürücüleri yer alýr.
 %setup -q
 
 %build
+rm -f missing
 aclocal
 autoconf
+automake -a -c
 %configure
 %{__make}
 
