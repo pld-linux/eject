@@ -5,7 +5,7 @@ Summary(pl):	Eject otwieranie szuflad CDROM, Jaz, ZIP i innych
 Summary(tr):	Eject yeteneði olan aygýtlarý kontrol eder
 Name:		eject
 Version:	2.0.9
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/System
 Group(de):	Applikationen/System
