@@ -40,7 +40,7 @@ CD-ROM'lar, Zip sürücüleri ve bazý disket sürücüleri yer alýr.
 %setup -q
 
 %build
-make CFLAGS="-Wall $RPM_OPT_FLAGS"
+%{__make} CFLAGS="-Wall $RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
