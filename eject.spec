@@ -9,7 +9,7 @@ Summary(tr):	Eject yeteneПi olan aygЩtlarЩ kontrol eder
 Summary(uk):	Програма, що виштовху╓ зм╕нн╕ нос╕╖ з накопичувач╕в
 Name:		eject
 Version:	2.0.13
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/System
 Source0:	http://www.pobox.com/~tranter/%{name}-%{version}.tar.gz
