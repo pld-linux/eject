@@ -1,0 +1,28 @@
+diff -u eject-2.0.13/po.orig/de_DE.po eject-2.0.13/po/de_DE.po
+--- eject-2.0.13/po.orig/de_DE.po	Mon Dec  9 23:34:22 2002
++++ eject-2.0.13/po/de_DE.po	Tue Aug  3 16:20:04 2004
+@@ -11,8 +11,8 @@
+ "Last-Translator: nordi <nordi@addcom.de>\n"
+ "Language-Team:\n"
+ "MIME-Version: 1.0\n"
+-"Content-Type: text/plain; charset=CHARSET\n"
+-"Content-Transfer-Encoding: ENCODING\n"
++"Content-Type: text/plain; charset=iso-8859-1\n"
++"Content-Transfer-Encoding: 8bit\n"
+ 
+ #: ../eject.c:110 ../eject.c:893
+ #, c-format
+diff -u eject-2.0.13/po.orig/zh_TW.Big5.po eject-2.0.13/po/zh_TW.Big5.po
+--- eject-2.0.13/po.orig/zh_TW.Big5.po	Mon Dec  9 23:31:44 2002
++++ eject-2.0.13/po/zh_TW.Big5.po	Tue Aug  3 16:21:49 2004
+@@ -11,8 +11,8 @@
+ "Last-Translator: Kun-Chung Hsieh <linuxer@coventive.com>\n"
+ "Language-Team: taiwan <tw@li.org>\n"
+ "MIME-Version: 1.0\n"
+-"Content-Type: text/plain; charset=CHARSET\n"
+-"Content-Transfer-Encoding: ENCODING\n"
++"Content-Type: text/plain; charset=big5\n"
++"Content-Transfer-Encoding: 8bit\n"
+ 
+ #: ../eject.c:110 ../eject.c:893
+ #, c-format
