@@ -6,10 +6,10 @@ Summary(tr):	Eject yeteneði olan aygýtlarý kontrol eder
 Name:		eject
 Version:	2.0.2
 Release:	4
-Copyright:	GPL
+License:	GPL
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
-Source:		http://metalab.unc.edu/pub/Linux/utils/disk-management/%{name}-%{version}.tar.gz
+Source0:	http://metalab.unc.edu/pub/Linux/utils/disk-management/%{name}-%{version}.tar.gz
 URL:		http://www.pobox.com/~tranter/eject.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -18,8 +18,8 @@ This program allows the user to eject media that is autoejecting like
 CD-ROMs, Jaz and Zip drives, and floppy drives on SPARC machines.
 
 %description -l de
-Dieses Programm ermöglicht auf SPARC-Rechnern das Auswerfen 
-von Datenträgern wie CD-ROMs, Jaz-, Zip- und Floppy-Disketten, die
+Dieses Programm ermöglicht auf SPARC-Rechnern das Auswerfen von
+Datenträgern wie CD-ROMs, Jaz-, Zip- und Floppy-Disketten, die
 normalerweise automatisch ausgeworfen werden.
 
 %description -l fr
@@ -28,13 +28,13 @@ comme les CD-ROM, les lecteurs Zip et Jaz, et les disquettes sur les
 SPARC.
 
 %description -l pl
-Program do automatycznego otwierania szuflad w urz±dzeniach CDROM, Jaz,
-ZIP floppy (na maszynach SPARC) oraz innych.
+Program do automatycznego otwierania szuflad w urz±dzeniach CDROM,
+Jaz, ZIP floppy (na maszynach SPARC) oraz innych.
 
 %description -l tr
-Bu yazýlým paketi ile kullanýcýya 'eject' yeteneði olan aygýtlarý kontrol
-olanaðý verilmektedir. Bu yeteneði olan aygýtlar arasýnda CD-ROM'lar, Zip
-sürücüleri ve bazý disket sürücüleri yer alýr.
+Bu yazýlým paketi ile kullanýcýya 'eject' yeteneði olan aygýtlarý
+kontrol olanaðý verilmektedir. Bu yeteneði olan aygýtlar arasýnda
+CD-ROM'lar, Zip sürücüleri ve bazý disket sürücüleri yer alýr.
 
 %prep
 %setup -q
