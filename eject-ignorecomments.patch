@@ -1,0 +1,11 @@
+--- eject-2.0.7/eject.c.orig	Tue May 15 00:19:24 2001
++++ eject-2.0.7/eject.c	Thu May 17 22:44:04 2001
+@@ -563,6 +563,8 @@
+ 	}
+ 	
+ 	while (fgets(line, sizeof(line), fp) != 0) {
++		if (line && line[0] == '#')
++			continue;
+ 		rc = sscanf(line, "%1023s %1023s", s1, s2);
+ 		if (rc >= 2) {
+ 			int mtabmaj, mtabmin;
