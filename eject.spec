@@ -37,9 +37,6 @@ sürücüleri ve bazý disket sürücüleri yer alýr.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p0
-%patch2 -p0
 
 %build
 make CFLAGS="-Wall $RPM_OPT_FLAGS"
