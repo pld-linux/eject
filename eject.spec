@@ -1,11 +1,15 @@
 Summary:	ejects ejectable media and controls auto ejection
 Summary(de):	wirft austauschbare DatentrДger aus und steuert Auswurf
+Summary(es):	Expulsa medias expulsables y controla autoexpulsiСn
 Summary(fr):	Иjecte un support Иjectable et commande l'Иjection automatique
 Summary(pl):	Eject otwieranie szuflad CDROM, Jaz, ZIP i innych
+Summary(pt_BR):	Ejeta mМdias ejetАveis e controla auto-ejeГЦo
+Summary(ru):	Программа, выталкивающая сменные носители из накопителей
 Summary(tr):	Eject yeteneПi olan aygЩtlarЩ kontrol eder
+Summary(uk):	Програма, що виштовху╓ зм╕нн╕ нос╕╖ з накопичувач╕в
 Name:		eject
 Version:	2.0.12
-Release:	3
+Release:	5
 License:	GPL
 Group:		Applications/System
 Source0:	http://members.home.net/jefftranter/%{name}-%{version}.tar.gz
@@ -25,6 +29,10 @@ Dieses Programm ermЖglicht auf SPARC-Rechnern das Auswerfen von
 DatentrДgern wie CD-ROMs, Jaz-, Zip- und Floppy-Disketten, die
 normalerweise automatisch ausgeworfen werden.
 
+%description -l es
+Este programa permite al usuario expulsar media que es autoexpulsable
+como CD-ROMs, drives Jaz y Zip y floppy drives en mАquinas SPARC.
+
 %description -l fr
 Ce programme permet Ю l'utilisateur d'Иjecter un support autoИjectable
 comme les CD-ROM, les lecteurs Zip et Jaz, et les disquettes sur les
@@ -34,10 +42,26 @@ SPARC.
 Program do automatycznego otwierania szuflad w urz╠dzeniach CDROM,
 Jaz, ZIP floppy (na maszynach SPARC) oraz innych.
 
+%description -l pt_BR
+Este programa permite ao usuАrio ejetar mМdia que И auto-ejetАvel como
+CD-ROMs, drives Jaz e Zip e floppy drives em mАquinas SPARC.
+
+%description -l ru
+Эта программа позволяет пользователю выталкивать сменные носители из
+накопителей, поддерживающих программный eject (такие как CD-ROMы,
+Iomega Jaz или Zip диски, флоппи-диски на SPARC-машинах). Eject может
+также управлять некоторыми CD ченджерами.
+
 %description -l tr
 Bu yazЩlЩm paketi ile kullanЩcЩya 'eject' yeteneПi olan aygЩtlarЩ
 kontrol olanaПЩ verilmektedir. Bu yeteneПi olan aygЩtlar arasЩnda
 CD-ROM'lar, Zip sЭrЭcЭleri ve bazЩ disket sЭrЭcЭleri yer alЩr.
+
+%description -l uk
+Ця програма дозволя╓ користувачев╕ виштовхувати зм╕нн╕ нос╕╖ з
+накопичувач╕в, що п╕дтримують програмний eject (так╕ як CD-ROMи,
+Iomega Jaz чи Zip диски, флоп╕-диски на SPARC-машинах). Eject може
+також управляти деякими CD ченджерами
 
 %prep
 %setup -q
