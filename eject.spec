@@ -41,6 +41,8 @@ CD-ROM'lar, Zip sürücüleri ve bazý disket sürücüleri yer alýr.
 %setup -q
 
 %build
+aclocal
+autoconf
 %configure
 %{__make}
 
