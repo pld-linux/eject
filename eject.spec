@@ -1,5 +1,5 @@
 Summary:	ejects ejectable media and controls auto ejection
-Summary(de):	wirft austauschbare Datenträger aus und steuert Auswurf 
+Summary(de):	wirft austauschbare Datenträger aus und steuert Auswurf
 Summary(fr):	éjecte un support éjectable et commande l'éjection automatique
 Summary(pl):	Eject otwieranie szuflad CDROM, Jaz, ZIP i innych
 Summary(tr):	Eject yeteneði olan aygýtlarý kontrol eder
