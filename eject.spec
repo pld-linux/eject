@@ -88,9 +88,8 @@ mv -f po/{zh_TW.Big5,zh_TW}.po
 cp %{SOURCE2} po/pl.po
 
 %build
-rm -f missing
 %{__gettextize}
-%{__aclocal} -I m4
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
