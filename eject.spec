@@ -9,13 +9,14 @@ Summary(tr):	Eject yeteneПi olan aygЩtlarЩ kontrol eder
 Summary(uk):	Програма, що виштовху╓ зм╕нн╕ нос╕╖ з накопичувач╕в
 Name:		eject
 Version:	2.0.12
-Release:	5
+Release:	6
 License:	GPL
 Vendor:		Jeff Tranter <tranter@users.sourceforge.net>
 Group:		Applications/System
 Source0:	http://www.pobox.com/~tranter/%{name}-%{version}.tar.gz
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 Patch0:		%{name}-DESTDIR_fix.patch
+Patch1:		%{name}-gettext.patch
 URL:		http://sourceforge.net/projects/eject/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -68,11 +69,12 @@ Iomega Jaz чи Zip диски, флоп╕-диски на SPARC-машинах). Eject може
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 rm -f missing
 %{__gettextize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__automake}
 %configure
@@ -85,10 +87,12 @@ rm -rf $RPM_BUILD_ROOT
 
 bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
 
+%find_lang eject
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f eject.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS PORTING PROBLEMS README TODO
 %attr(755,root,root) %{_bindir}/*
