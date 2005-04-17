@@ -87,9 +87,12 @@ mv -f po/{zh_TW.Big5,zh_TW}.po
 
 cp %{SOURCE2} po/pl.po
 
+echo "de fr ja pl zh_TW" >> po/LINGUAS
+echo "eject.c\n i18n.h\n volname.c" >> po/POTFILES.in
+
 %build
 %{__gettextize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__automake}
 %configure
