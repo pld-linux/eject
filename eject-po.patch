@@ -1,7 +1,15 @@
-diff -u eject-2.0.13/po.orig/de_DE.po eject-2.0.13/po/de_DE.po
---- eject-2.0.13/po.orig/de_DE.po	Mon Dec  9 23:34:22 2002
-+++ eject-2.0.13/po/de_DE.po	Tue Aug  3 16:20:04 2004
-@@ -11,8 +11,8 @@
+diff -ur eject-2.0.13/po/de_DE.po eject-2.0.13.new/po/de_DE.po
+--- eject-2.0.13/po/de_DE.po	2002-12-09 22:34:22.000000000 +0000
++++ eject-2.0.13.new/po/de_DE.po	2005-04-17 20:16:41.000000000 +0000
+@@ -5,14 +5,14 @@
+ #, fuzzy
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: PACKAGE VERSION\n"
++"Project-Id-Version: eject 2.0.13\n"
+ "POT-Creation-Date: 2001-06-07 12:23+0800\n"
+-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
++"PO-Revision-Date: 2001-06-07 12:23+0800\n"
  "Last-Translator: nordi <nordi@addcom.de>\n"
  "Language-Team:\n"
  "MIME-Version: 1.0\n"
@@ -12,10 +20,30 @@ diff -u eject-2.0.13/po.orig/de_DE.po eject-2.0.13/po/de_DE.po
  
  #: ../eject.c:110 ../eject.c:893
  #, c-format
-diff -u eject-2.0.13/po.orig/zh_TW.Big5.po eject-2.0.13/po/zh_TW.Big5.po
---- eject-2.0.13/po.orig/zh_TW.Big5.po	Mon Dec  9 23:31:44 2002
-+++ eject-2.0.13/po/zh_TW.Big5.po	Tue Aug  3 16:21:49 2004
-@@ -11,8 +11,8 @@
+diff -ur eject-2.0.13/po/fr_FR.po eject-2.0.13.new/po/fr_FR.po
+--- eject-2.0.13/po/fr_FR.po	2002-12-09 22:31:04.000000000 +0000
++++ eject-2.0.13.new/po/fr_FR.po	2005-04-17 20:18:48.000000000 +0000
+@@ -4,7 +4,7 @@
+ #
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: PACKAGE VERSION\n"
++"Project-Id-Version: eject 2.0.13\n"
+ "POT-Creation-Date: 2001-06-07 12:23+0800\n"
+ "PO-Revision-Date: 2002-01-04 18:57GMT\n"
+ "Last-Translator: mathic <mathic@netcourrier.com>\n"
+diff -ur eject-2.0.13/po/zh_TW.Big5.po eject-2.0.13.new/po/zh_TW.Big5.po
+--- eject-2.0.13/po/zh_TW.Big5.po	2002-12-09 22:31:44.000000000 +0000
++++ eject-2.0.13.new/po/zh_TW.Big5.po	2005-04-17 20:17:03.000000000 +0000
+@@ -5,14 +5,14 @@
+ #, fuzzy
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: PACKAGE VERSION\n"
++"Project-Id-Version: eject 2.0.13\n"
+ "POT-Creation-Date: 2001-06-07 12:23+0800\n"
+-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
++"PO-Revision-Date: 2001-06-07 12:23+0800\n"
  "Last-Translator: Kun-Chung Hsieh <linuxer@coventive.com>\n"
  "Language-Team: taiwan <tw@li.org>\n"
  "MIME-Version: 1.0\n"
