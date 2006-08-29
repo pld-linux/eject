@@ -8,20 +8,19 @@ Summary(ru):	Программа, выталкивающая сменные носители из накопителей
 Summary(tr):	Eject yeteneПi olan aygЩtlarЩ kontrol eder
 Summary(uk):	Програма, що виштовху╓ зм╕нн╕ нос╕╖ з накопичувач╕в
 Name:		eject
-Version:	2.0.13
-Release:	5
+Version:	2.1.0
+Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://www.pobox.com/~tranter/%{name}-%{version}.tar.gz
-# Source0-md5:	b796ad77beb4e7bdd08d6149701ab778
+# Source0-md5:	82e3a7a4d7e3323018c6938015ff25f7
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	dd66d948c94fe0f0b4483c51873e6e20
 Source2:	%{name}-pl.po
 Patch0:		%{name}-gettext.patch
 Patch1:		%{name}-includes.patch
 Patch2:		%{name}-po.patch
-Patch3:		%{name}-FHS.patch
-Patch4:		%{name}-symlink.patch
+Patch3:		%{name}-symlink.patch
 URL:		http://eject.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -75,9 +74,8 @@ Iomega Jaz чи Zip диски, флоп╕-диски на SPARC-машинах). Eject може
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
+#%patch2 -p1
 %patch3 -p1
-%patch4 -p1
 
 # standardize locale names
 mv -f po/{de_DE,de}.po
