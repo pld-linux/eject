@@ -8,20 +8,19 @@ Summary(ru):	Программа, выталкивающая сменные носители из накопителей
 Summary(tr):	Eject yeteneПi olan aygЩtlarЩ kontrol eder
 Summary(uk):	Програма, що виштовху╓ зм╕нн╕ нос╕╖ з накопичувач╕в
 Name:		eject
-Version:	2.1.0
+Version:	2.1.5
 Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	http://www.pobox.com/~tranter/%{name}-%{version}.tar.gz
-# Source0-md5:	82e3a7a4d7e3323018c6938015ff25f7
+Source0:	http://ca.geocities.com/jefftranter@rogers.com/eject-2.1.5.tar.gz
+# Source0-md5:	b96a6d4263122f1711db12701d79f738
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	dd66d948c94fe0f0b4483c51873e6e20
 Source2:	%{name}-pl.po
 Patch0:		%{name}-gettext.patch
-Patch1:		%{name}-includes.patch
-Patch2:		%{name}-po.patch
-Patch3:		%{name}-symlink.patch
-URL:		http://eject.sourceforge.net/
+Patch1:		%{name}-po.patch
+Patch2:		%{name}-symlink.patch
+URL:		http://ca.geocities.com/jefftranter@rogers.com/eject.html
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
@@ -71,21 +70,19 @@ Iomega Jaz чи Zip диски, флоп╕-диски на SPARC-машинах). Eject може
 також управляти деякими CD ченджерами
 
 %prep
-%setup -q
+%setup -q -n %{name}
 %patch0 -p1
-%patch1 -p1
+#%patch1 -p1
 #%patch2 -p1
-%patch3 -p1
 
 # standardize locale names
 mv -f po/{de_DE,de}.po
 mv -f po/{fr_FR,fr}.po
 mv -f po/{ja_JP.eucJP,ja}.po
-mv -f po/{zh_TW.Big5,zh_TW}.po
 
 cp %{SOURCE2} po/pl.po
 
-echo "de fr ja pl zh_TW" >> po/LINGUAS
+echo "de fr ja pl" >> po/LINGUAS
 echo "eject.c\n i18n.h\n volname.c" >> po/POTFILES.in
 
 %build
