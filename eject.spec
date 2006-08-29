@@ -23,7 +23,7 @@ Patch2:		%{name}-symlink.patch
 URL:		http://ca.geocities.com/jefftranter@rogers.com/eject.html
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-devel >= 0.15
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
