@@ -37,9 +37,9 @@
 ./eject: CD-ROM eject command succeeded
 
 
---- eject-2.0.13/eject.c.orig	2002-12-09 23:28:08.000000000 +0100
-+++ eject-2.0.13/eject.c	2004-10-31 04:56:31.794216376 +0100
-@@ -715,36 +715,13 @@
+--- eject/eject.c.orig	2006-02-11 02:54:38.000000000 +0100
++++ eject/eject.c	2006-09-10 11:39:58.826171000 +0200
+@@ -974,36 +974,13 @@
  /* Check if name is a symbolic link. If so, return what it points to. */
  static char *SymLink(const char *name)
  {
@@ -81,39 +81,40 @@
  }
  
  
-@@ -818,7 +795,6 @@
- 	int mounted = 0;   /* true if device is mounted */
+@@ -1086,7 +1063,6 @@
  	int mountable = 0; /* true if device is in /etc/fstab */
+ 	int result = 0;    /* store the result of a operation */
  	char *pattern;	   /* regex for device if multiple partitions */
 -	int ld = 6;	   /* symbolic link max depth */
  
  	I18NCODE
  
-@@ -860,20 +836,13 @@
- 		printf(_("%s: expanded name is `%s'\n"), programName, fullName);
- 
- 	/* check for a symbolic link */
--	while ((linkName = SymLink(fullName)) && (ld > 0)) {
--		if (v_option)
--			printf(_("%s: `%s' is a link to `%s'\n"), programName, fullName, linkName);
--		free(fullName);
--		fullName = strdup(linkName);
--		free(linkName);
--		linkName = 0;
--		ld--;
--	}
--	/* handle max depth exceeded option */
--	if (ld <= 0) {
--		printf(_("%s: maximum symbolic link depth exceeded: `%s'\n"), programName, fullName);
--		exit(1);
--	}
-+	linkName = SymLink(fullName);
-+	if (v_option)
+@@ -1134,21 +1110,13 @@
+ 	  fullNameOrig = strdup(fullName);
+ 	  linkName = strdup(fullName); /* ensure linkName is initialized */
+ 	  if (!p_option) {
+-	    while ((linkName = SymLink(fullName)) && (ld > 0)) {
+-	      if (v_option)
+-		printf(_("%s: `%s' is a link to `%s'\n"), programName,
+-		       fullName, linkName);
+-	      free(fullName);
+-	      fullName = strdup(linkName);
+-	      free(linkName);
+-	      linkName = 0;
+-	      ld--;
+-	    }
+-	  }
+-	  /* handle max depth exceeded option */
+-	  if (ld <= 0) {
+-	    printf(_("%s: maximum symbolic link depth exceeded: `%s'\n"), programName, fullName);
+-	    exit(1);
++	    linkName = SymLink(fullName);
++	    if (v_option)
 +		printf(_("%s: `%s' is a link to `%s'\n"), programName, fullName, linkName);
-+	free(fullName);
-+	fullName = strdup(linkName);
-+	free(linkName);
-+	linkName = 0;
++	    free(fullName);
++	    fullName = strdup(linkName);
++	    free(linkName);
++	    linkName = NULL;
+ 	  }
  
- 	/* if mount point, get device name */
- 	mounted = MountedDevice(fullName, &mountName, &deviceName);
+ 	  /* if mount point, get device name */

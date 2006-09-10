@@ -1,32 +1,34 @@
 # Polish translation for eject.
-# Copyright (C) 2001 Free Software Foundation, Inc.
 # This file is distributed under the same license as the eject package.
-# Jakub Bogusz <qboosh@pld.org.pl>, 2003.
+# Jakub Bogusz <qboosh@pld-linux.org>, 2003-2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: eject 2.0.13\n"
-"POT-Creation-Date: 2003-04-24 00:32+0200\n"
-"PO-Revision-Date: 2003-04-24 00:33+0200\n"
+"Project-Id-Version: eject 2.1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-09-10 11:26+0200\n"
+"PO-Revision-Date: 2006-09-10 11:33+0200\n"
 "Last-Translator: Jakub Bogusz <qboosh@pld.org.pl>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../eject.c:114
+#: eject.c:156
 #, c-format
 msgid ""
 "Eject version %s by Jeff Tranter (tranter@pobox.com)\n"
 "Usage:\n"
 "  eject -h\t\t\t\t-- display command usage and exit\n"
 "  eject -V\t\t\t\t-- display program version and exit\n"
-"  eject [-vnrsfq] [<name>]\t\t-- eject device\n"
+"  eject [-vnrsfqpm] [<name>]\t\t-- eject device\n"
 "  eject [-vn] -d\t\t\t-- display default device\n"
 "  eject [-vn] -a on|off|1|0 [<name>]\t-- turn auto-eject feature on or off\n"
 "  eject [-vn] -c <slot> [<name>]\t-- switch discs on a CD-ROM changer\n"
 "  eject [-vn] -t [<name>]\t\t-- close tray\n"
+"  eject [-vn] -T [<name>]\t\t-- toggle tray\n"
 "  eject [-vn] -x <speed> [<name>]\t-- set CD-ROM max speed\n"
+"  eject [-vn] -X [<name>]\t\t-- list CD-ROM available speeds\n"
 "Options:\n"
 "  -v\t-- enable verbose output\n"
 "  -n\t-- don't eject, just show device found\n"
@@ -35,17 +37,20 @@ msgid ""
 "  -f\t-- eject floppy\n"
 "  -q\t-- eject tape\n"
 "  -p\t-- use /proc/mounts instead of /etc/mtab\n"
+"  -m\t-- do not unmount device even if it is mounted\n"
 msgstr ""
 "Eject wersja %s, napisa³ Jeff Tranter (tranter@pobox.com)\n"
 "Sk³adnia:\n"
 "  eject -h\t\t\t\t- wy¶wietlenie sk³adni linii poleceñ\n"
 "  eject -V\t\t\t\t- wy¶wietlenie wersji programu\n"
-"  eject [-vnrsfq] [<nazwa>]\t\t- wysuniêcie no¶nika z urz±dzenia\n"
+"  eject [-vnrsfqpm] [<nazwa>]\t\t- wysuniêcie no¶nika z urz±dzenia\n"
 "  eject [-vn] -d\t\t\t- wypisanie domy¶lnego urz±dzenia\n"
 "  eject [-vn] -a on|off|1|0 [<nazwa>]\t- w³./wy³. automatycznego wysuwania\n"
 "  eject [-vn] -c <slot> [<nazwa>]\t- zmiana dysków w zmieniarce CD-ROM\n"
 "  eject [-vn] -t [<nazwa>]\t\t- zamkniêcie szuflady\n"
+"  eject [-vn] -T [<nazwa>]\t\t- otworzenie lub zamkniêcie szuflady\n"
 "  eject [-vn] -x <szybko¶æ> [<nazwa>]\t- ustawienie maksymalnej szybko¶ci CD\n"
+"  eject [-vn] -X [<nazwa>]\t\t- wypisanie dostêpnych szybko¶ci CD\n"
 "Opcje:\n"
 "  -v\t- w³±czenie szczegó³owych informacji\n"
 "  -n\t- nie wysuwanie, tylko pokazanie znalezionego urz±dzenia\n"
@@ -54,24 +59,26 @@ msgstr ""
 "  -f\t- wysuniêcie dyskietki\n"
 "  -q\t- wysuniêcie ta¶my\n"
 "  -p\t- u¿ycie /proc/mounts zamiast /etc/mtab\n"
+"  -m\t- nie odmontowywanie urz±dzenia nawet je¶li jest podmontowane\n"
 
-#: ../eject.c:135
+#: eject.c:187
+#, c-format
 msgid ""
 "Long options:\n"
-"  -h --help   -v --verbose\t -d --default\n"
+"  -h --help   -v --verbose      -d --default\n"
 "  -a --auto   -c --changerslot  -t --trayclose  -x --cdspeed\n"
-"  -r --cdrom  -s --scsi\t -f --floppy\n"
-"  -q --tape   -n --noop\t -V --version\n"
-"  -p --proc\n"
+"  -r --cdrom  -s --scsi         -f --floppy     -X --listspeed     -q --tape\n"
+"  -n --noop   -V --version\n"
+"  -p --proc   -m --no-unmount   -T --traytoggle\n"
 msgstr ""
 "D³ugie opcje:\n"
 "  -h --help   -v --verbose      -d --default\n"
 "  -a --auto   -c --changerslot  -t --trayclose  -x --cdspeed\n"
-"  -r --cdrom  -s --scsi         -f --floppy\n"
-"  -q --tape   -n --noop         -V --version\n"
-"  -p --proc\n"
+"  -r --cdrom  -s --scsi         -f --floppy     -X --listspeed     -q --tape\n"
+"  -n --noop   -V --version\n"
+"  -p --proc   -m --no-unmount   -T --traytoggle\n"
 
-#: ../eject.c:143
+#: eject.c:206
 #, c-format
 msgid ""
 "Parameter <name> can be a device file or a mount point.\n"
@@ -82,285 +89,336 @@ msgstr ""
 "W przypadku pominiêcia, zostanie u¿yta domy¶lna nazwa `%s'.\n"
 "Domy¶lnie próbowane s± kolejno -r, -s, -f i -q a¿ do powodzenia.\n"
 
-#: ../eject.c:195
+#: eject.c:261
 #, c-format
 msgid "%s: invalid argument to --auto/-a option\n"
 msgstr "%s: b³êdny argument dla opcji --auto/-a\n"
 
-#: ../eject.c:207
+#: eject.c:273
 #, c-format
 msgid "%s: invalid argument to --changerslot/-c option\n"
 msgstr "%s: b³êdny argument dla opcja --changerslot/-c\n"
 
-#: ../eject.c:219
+#: eject.c:285
 #, c-format
 msgid "%s: invalid argument to --cdspeed/-x option\n"
 msgstr "%s: b³êdny argument dla opcji --cdspeed/-x\n"
 
-#: ../eject.c:256
+#: eject.c:331
 #, c-format
 msgid "eject version %s by Jeff Tranter (tranter@pobox.com)\n"
 msgstr "eject wersja %s, napisa³ Jeff Tranter (tranter@pobox.com)\n"
 
-#: ../eject.c:266
+#: eject.c:341
 #, c-format
 msgid "%s: too many arguments\n"
 msgstr "%s: zbyt du¿o argumentów\n"
 
-#: ../eject.c:370
+#: eject.c:396 eject.c:1037
+#, c-format
+msgid "%s: could not allocate memory\n"
+msgstr "%s: nie uda³o siê przydzieliæ pamiêci\n"
+
+#: eject.c:401
+#, c-format
+msgid "%s: FindDevice called too often\n"
+msgstr "%s: FindDevice wywo³ywane zbyt czêsto\n"
+
+#: eject.c:475
 #, c-format
 msgid "%s: CD-ROM auto-eject command failed: %s\n"
 msgstr "%s: polecenie auto-eject dla CD-ROM-u nie powiod³o siê: %s\n"
 
-#: ../eject.c:387
+#: eject.c:492
 #, c-format
 msgid "%s: CD-ROM select disc command failed: %s\n"
 msgstr "%s: polecenie wyboru dysku CD-ROM nie powiod³o siê: %s\n"
 
-#: ../eject.c:393
+#: eject.c:498
 #, c-format
 msgid "%s: CD-ROM load from slot command failed: %s\n"
 msgstr "%s: polecenie za³adowania CD-ROM-u ze slotu nie powiod³o siê: %s\n"
 
-#: ../eject.c:397
+#: eject.c:502
 #, c-format
 msgid "%s: IDE/ATAPI CD-ROM changer not supported by this kernel\n"
 msgstr "%s: zmieniarka CD-ROM IDE/ATAPI nie obs³ugiwana przez to j±dro\n"
 
-#: ../eject.c:412
+#: eject.c:521
 #, c-format
 msgid "%s: CD-ROM tray close command failed: %s\n"
 msgstr "%s: polecenie zamkniêcia szuflady CD-ROM-u nie powiod³o siê: %s\n"
 
-#: ../eject.c:416
+#: eject.c:525
 #, c-format
 msgid "%s: CD-ROM tray close command not supported by this kernel\n"
 msgstr "%s: polecenie zamkniêcia szuflady CD-ROM-u nie obs³ugiwane przez to j±dro\n"
 
-#: ../eject.c:433
+#: eject.c:572
+#, c-format
+msgid "%s: CD-ROM tray toggle command not supported by this kernel\n"
+msgstr "%s: polecenie zmiany stanu szuflady CD-ROM-u nie obs³ugiwane przez to j±dro\n"
+
+#: eject.c:589
 #, c-format
 msgid "%s: CD-ROM select speed command failed: %s\n"
 msgstr "%s: polecenie wyboru szybko¶ci CD-ROM-u nie powiod³o siê: %s\n"
 
-#: ../eject.c:437
+#: eject.c:593 eject.c:674
 #, c-format
 msgid "%s: CD-ROM select speed command not supported by this kernel\n"
 msgstr "%s: polecenie wyboru szybko¶ci CD-ROM-u nie obs³ugiwane przez to j±dro\n"
 
-#: ../eject.c:547
+#: eject.c:608
 #, c-format
-msgid "%s: unable to exec /bin/umount of `%s': %s\n"
-msgstr "%s: nie mo¿na uruchomiæ /bin/umount dla `%s': %s\n"
+msgid "%s: unable to read the speed from /proc/sys/dev/cdrom/info\n"
+msgstr "%s: nie mo¿na odczytaæ szybko¶ci z /proc/sys/dev/cdrom/info\n"
 
-#: ../eject.c:552
+#: eject.c:624
+#, c-format
+msgid "%s: error while finding CD-ROM name\n"
+msgstr "%s: b³±d podczas szukania nazwy CD-ROM-u\n"
+
+#: eject.c:637 eject.c:645
+#, c-format
+msgid "%s: error while reading speed\n"
+msgstr "%s: b³±d podczas odczytu szybko¶ci\n"
+
+#: eject.c:794
+#, c-format
+msgid "%s: unable to exec umount of `%s': %s\n"
+msgstr "%s: nie mo¿na uruchomiæ umount dla `%s': %s\n"
+
+#: eject.c:799
 #, c-format
 msgid "%s: unable to fork: %s\n"
 msgstr "%s: nie mo¿na wykonaæ fork: %s\n"
 
-#: ../eject.c:557
+#: eject.c:804
 #, c-format
 msgid "%s: unmount of `%s' did not exit normally\n"
 msgstr "%s: odmontowanie `%s' nie zakoñczy³o siê normalnie\n"
 
-#: ../eject.c:561
+#: eject.c:808
 #, c-format
 msgid "%s: unmount of `%s' failed\n"
 msgstr "%s: odmontowanie `%s' nie powiod³o siê\n"
 
-#: ../eject.c:574
+#: eject.c:821
 #, c-format
 msgid "%s: unable to open `%s'\n"
 msgstr "%s: nie mo¿na otworzyæ `%s'\n"
 
-#: ../eject.c:619 ../eject.c:695
+#: eject.c:867 eject.c:954
 #, c-format
 msgid "unable to open %s: %s\n"
 msgstr "nie mo¿na otworzyæ %s: %s\n"
 
-#: ../eject.c:659
+#: eject.c:914
 #, c-format
 msgid "%s: unable to open /etc/fstab: %s\n"
 msgstr "%s: nie mo¿na otworzyæ /etc/fstab: %s\n"
 
-#: ../eject.c:705 ../eject.c:938
+#: eject.c:964
 #, c-format
 msgid "%s: unmounting `%s'\n"
 msgstr "%s: odmontowywanie `%s'\n"
 
-#: ../eject.c:778
+#: eject.c:1044
 #, c-format
 msgid "%s: `%s' is a multipartition device\n"
 msgstr "%s: `%s' jest urz±dzeniem o wielu partycjach\n"
 
-#: ../eject.c:783
+#: eject.c:1049
 #, c-format
 msgid "%s: `%s' is not a multipartition device\n"
 msgstr "%s: `%s' nie jest urz±dzeniem o wielu partycjach\n"
 
-#: ../eject.c:796
+#: eject.c:1062
 #, c-format
 msgid "%s: setting CD-ROM speed to auto\n"
 msgstr "%s: ustawianie szybko¶ci CD-ROM-u na auto\n"
 
-#: ../eject.c:798
+#: eject.c:1064
 #, c-format
 msgid "%s: setting CD-ROM speed to %dX\n"
 msgstr "%s: ustawianie szybko¶ci CD-ROM-u na %dX\n"
 
-#: ../eject.c:834
+#: eject.c:1102
 #, c-format
 msgid "%s: default device: `%s'\n"
 msgstr "%s: domy¶lne urz±dzenie: `%s'\n"
 
-#: ../eject.c:842
+#: eject.c:1110
 #, c-format
 msgid "%s: using default device `%s'\n"
 msgstr "%s: u¿ycie domy¶lnego urz±dzenia `%s'\n"
 
-#: ../eject.c:851
+#: eject.c:1119
 #, c-format
 msgid "%s: device name is `%s'\n"
 msgstr "%s: nazwa urz±dzenia to `%s'\n"
 
-#: ../eject.c:856
+#: eject.c:1125
 #, c-format
 msgid "%s: unable to find or open device for: `%s'\n"
 msgstr "%s: nie mo¿na znale¼æ lub otworzyæ urz±dzenia dla `%s'\n"
 
-#: ../eject.c:860
+#: eject.c:1130
 #, c-format
 msgid "%s: expanded name is `%s'\n"
 msgstr "%s: rozszerzon± nazw± jest `%s'\n"
 
-#: ../eject.c:865
+#: eject.c:1139
 #, c-format
 msgid "%s: `%s' is a link to `%s'\n"
 msgstr "%s: `%s' jest dowi±zaniem do `%s'\n"
 
-#: ../eject.c:874
+#: eject.c:1150
 #, c-format
 msgid "%s: maximum symbolic link depth exceeded: `%s'\n"
 msgstr "%s: przekroczono maksymaln± g³êboko¶æ dowi±zañ symbolicznych: `%s'\n"
 
-#: ../eject.c:882
+#: eject.c:1158
 #, c-format
 msgid "%s: `%s' is mounted at `%s'\n"
 msgstr "%s: `%s' jest podmontowane pod `%s'\n"
 
-#: ../eject.c:884
+#: eject.c:1161
 #, c-format
 msgid "%s: `%s' is not mounted\n"
 msgstr "%s: `%s' nie jest podmontowane\n"
 
-#: ../eject.c:895
+#: eject.c:1173
 #, c-format
 msgid "%s: `%s' can be mounted at `%s'\n"
 msgstr "%s: `%s' mo¿e byæ podmontowane pod `%s'\n"
 
-#: ../eject.c:897
+#: eject.c:1175
 #, c-format
 msgid "%s: `%s' is not a mount point\n"
 msgstr "%s: `%s' nie jest punktem montowania\n"
 
-#: ../eject.c:903
+#: eject.c:1182
+#, c-format
+msgid "%s: tried to use `%s' as device name but it is no block device\n"
+msgstr "%s: próbowano u¿yæ `%s' jako nazwy urz±dzenia, ale nie jest to urz±dzenie blokowe\n"
+
+#: eject.c:1190
 #, c-format
 msgid "%s: device is `%s'\n"
 msgstr "%s: urz±dzenie to `%s'\n"
 
-#: ../eject.c:905
+#: eject.c:1192
 #, c-format
 msgid "%s: exiting due to -n/--noop option\n"
 msgstr "%s: zakoñczenie z powodu opcji -n/--noop\n"
 
-#: ../eject.c:913
+#: eject.c:1200
 #, c-format
 msgid "%s: enabling auto-eject mode for `%s'\n"
 msgstr "%s: w³±czanie trybu auto-eject dla `%s'\n"
 
-#: ../eject.c:915
+#: eject.c:1202
 #, c-format
 msgid "%s: disabling auto-eject mode for `%s'\n"
 msgstr "%s: wy³±czanie trybu auto-eject dla `%s'\n"
 
-#: ../eject.c:925
+#: eject.c:1212
 #, c-format
 msgid "%s: closing tray\n"
 msgstr "%s: zamykanie szuflady\n"
 
-#: ../eject.c:951
+#: eject.c:1222
+#, c-format
+msgid "%s: listing CD-ROM speed\n"
+msgstr "%s: wypisywanie szybko¶ci CD-ROM-u\n"
+
+#: eject.c:1234
+#, c-format
+msgid "%s: unmounting device `%s' from `%s'\n"
+msgstr "%s: odmontowywanie urz±dzenia `%s' z `%s'\n"
+
+#: eject.c:1247
+#, c-format
+msgid "%s: toggling tray\n"
+msgstr "%s: zmiana stanu szuflady\n"
+
+#: eject.c:1257
 #, c-format
 msgid "%s: selecting CD-ROM disc #%d\n"
 msgstr "%s: wybieranie dysku CD-ROM #%d\n"
 
-#: ../eject.c:969
+#: eject.c:1275
 #, c-format
 msgid "%s: trying to eject `%s' using CD-ROM eject command\n"
 msgstr "%s: próba wysuniêcia `%s' przy u¿yciu polecenia wysuniêcia CD-ROM-u\n"
 
-#: ../eject.c:973
+#: eject.c:1279
 #, c-format
 msgid "%s: CD-ROM eject command succeeded\n"
 msgstr "%s: polecenie wysuniêcia CD-ROM-u powiod³o siê\n"
 
-#: ../eject.c:975
+#: eject.c:1281
 #, c-format
 msgid "%s: CD-ROM eject command failed\n"
 msgstr "%s: polecenie wysuniêcia CD-ROM-u nie powiod³o siê\n"
 
-#: ../eject.c:981
+#: eject.c:1288
 #, c-format
 msgid "%s: trying to eject `%s' using SCSI commands\n"
 msgstr "%s: próba wysuniêcia `%s' przy u¿yciu poleceñ SCSI\n"
 
-#: ../eject.c:985
+#: eject.c:1292
 #, c-format
 msgid "%s: SCSI eject succeeded\n"
 msgstr "%s: polecenie wysuniêcia SCSI powiod³o siê\n"
 
-#: ../eject.c:987
+#: eject.c:1294
 #, c-format
 msgid "%s: SCSI eject failed\n"
 msgstr "%s: polecenie wysuniêcia SCSI nie powiod³o siê\n"
 
-#: ../eject.c:993
+#: eject.c:1302
 #, c-format
 msgid "%s: trying to eject `%s' using floppy eject command\n"
 msgstr "%s: próba wysuniêcia `%s' przy u¿yciu polecenia wysuniêcia dyskietki\n"
 
-#: ../eject.c:997
+#: eject.c:1306
 #, c-format
 msgid "%s: floppy eject command succeeded\n"
 msgstr "%s: polecenie wysuniêcia dyskietki powiod³o siê\n"
 
-#: ../eject.c:999
+#: eject.c:1308
 #, c-format
 msgid "%s: floppy eject command failed\n"
 msgstr "%s: polecenie wysuniêcia dyskietki nie powiod³o siê\n"
 
-#: ../eject.c:1005
+#: eject.c:1316
 #, c-format
 msgid "%s: trying to eject `%s' using tape offline command\n"
 msgstr "%s: próba wysuniêcia `%s' przy u¿yciu polecenia wysuniêcia ta¶my\n"
 
-#: ../eject.c:1009
+#: eject.c:1320
 #, c-format
 msgid "%s: tape offline command succeeded\n"
 msgstr "%s: polecenie wysuniêcia ta¶my powiod³o siê\n"
 
-#: ../eject.c:1011
+#: eject.c:1322
 #, c-format
 msgid "%s: tape offline command failed\n"
 msgstr "%s: polecenie wysuniêcia ta¶my nie powiod³o siê\n"
 
-#: ../eject.c:1016
+#: eject.c:1328
 #, c-format
 msgid "%s: unable to eject, last error: %s\n"
 msgstr "%s: nie mo¿na wysun±æ, ostatni b³±d: %s\n"
 
-#: ../volname.c:57
+#: volname.c:59
+#, c-format
 msgid "usage: volname [<device-file>]\n"
 msgstr "sk³adnia: volname [<plik-urz±dzenia>]\n"
 
-#: ../volname.c:63 ../volname.c:69 ../volname.c:75
+#: volname.c:65 volname.c:71 volname.c:77
 msgid "volname"
 msgstr "volname"
