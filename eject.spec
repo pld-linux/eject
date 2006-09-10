@@ -9,7 +9,7 @@ Summary(tr):	Eject yeteneði olan aygýtlarý kontrol eder
 Summary(uk):	ðÒÏÇÒÁÍÁ, ÝÏ ×ÉÛÔÏ×ÈÕ¤ ÚÍ¦ÎÎ¦ ÎÏÓ¦§ Ú ÎÁËÏÐÉÞÕ×ÁÞ¦×
 Name:		eject
 Version:	2.1.5
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	http://ca.geocities.com/jefftranter@rogers.com/eject-2.1.5.tar.gz
@@ -72,18 +72,22 @@ Iomega Jaz ÞÉ Zip ÄÉÓËÉ, ÆÌÏÐ¦-ÄÉÓËÉ ÎÁ SPARC-ÍÁÛÉÎÁÈ). Eject ÍÏÖÅ
 %prep
 %setup -q -n %{name}
 %patch0 -p1
-#%patch1 -p1
-#%patch2 -p1
+%patch1 -p1
+%patch2 -p1
 
 # standardize locale names
+mv -f po/{cs_CZ,cs}.po
 mv -f po/{de_DE,de}.po
+mv -f po/{es_ES,es}.po
 mv -f po/{fr_FR,fr}.po
 mv -f po/{ja_JP.eucJP,ja}.po
+mv -f po/{tr_TR,tr}.po
+mv -f po/{zh_TW.UTF-8,zh_TW}.po
 
 cp %{SOURCE2} po/pl.po
 
-echo "de fr ja pl" >> po/LINGUAS
-echo "eject.c\n i18n.h\n volname.c" >> po/POTFILES.in
+echo "cs de es fr ja pl pt_BR tr zh_TW" >> po/LINGUAS
+printf "eject.c\ni18n.h\nvolname.c\n" >> po/POTFILES.in
 
 %build
 %{__gettextize}
