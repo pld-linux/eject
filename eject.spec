@@ -1,12 +1,12 @@
 Summary:	ejects ejectable media and controls auto ejection
-Summary(de.UTF-8):   wirft austauschbare Datenträger aus und steuert Auswurf
-Summary(es.UTF-8):   Expulsa medias expulsables y controla autoexpulsión
-Summary(fr.UTF-8):   éjecte un support éjectable et commande l'éjection automatique
-Summary(pl.UTF-8):   Eject otwieranie szuflad CDROM, Jaz, ZIP i innych
-Summary(pt_BR.UTF-8):   Ejeta mídias ejetáveis e controla auto-ejeção
-Summary(ru.UTF-8):   Программа, выталкивающая сменные носители из накопителей
-Summary(tr.UTF-8):   Eject yeteneği olan aygıtları kontrol eder
-Summary(uk.UTF-8):   Програма, що виштовхує змінні носії з накопичувачів
+Summary(de.UTF-8):	wirft austauschbare Datenträger aus und steuert Auswurf
+Summary(es.UTF-8):	Expulsa medias expulsables y controla autoexpulsión
+Summary(fr.UTF-8):	éjecte un support éjectable et commande l'éjection automatique
+Summary(pl.UTF-8):	Eject otwieranie szuflad CDROM, Jaz, ZIP i innych
+Summary(pt_BR.UTF-8):	Ejeta mídias ejetáveis e controla auto-ejeção
+Summary(ru.UTF-8):	Программа, выталкивающая сменные носители из накопителей
+Summary(tr.UTF-8):	Eject yeteneği olan aygıtları kontrol eder
+Summary(uk.UTF-8):	Програма, що виштовхує змінні носії з накопичувачів
 Name:		eject
 Version:	2.1.5
 Release:	2
