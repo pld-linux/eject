@@ -1,12 +1,12 @@
 Summary:	ejects ejectable media and controls auto ejection
-Summary(de):	wirft austauschbare DatentrДger aus und steuert Auswurf
-Summary(es):	Expulsa medias expulsables y controla autoexpulsiСn
-Summary(fr):	Иjecte un support Иjectable et commande l'Иjection automatique
-Summary(pl):	Eject otwieranie szuflad CDROM, Jaz, ZIP i innych
-Summary(pt_BR):	Ejeta mМdias ejetАveis e controla auto-ejeГЦo
-Summary(ru):	Программа, выталкивающая сменные носители из накопителей
-Summary(tr):	Eject yeteneПi olan aygЩtlarЩ kontrol eder
-Summary(uk):	Програма, що виштовху╓ зм╕нн╕ нос╕╖ з накопичувач╕в
+Summary(de.UTF-8):   wirft austauschbare Datentrц╓ger aus und steuert Auswurf
+Summary(es.UTF-8):   Expulsa medias expulsables y controla autoexpulsiцЁn
+Summary(fr.UTF-8):   ц╘jecte un support ц╘jectable et commande l'ц╘jection automatique
+Summary(pl.UTF-8):   Eject otwieranie szuflad CDROM, Jaz, ZIP i innych
+Summary(pt_BR.UTF-8):   Ejeta mц╜dias ejetц║veis e controla auto-ejeц╖цёo
+Summary(ru.UTF-8):   п÷я─п╬пЁя─п╟п╪п╪п╟, п╡я▀я┌п╟п╩п╨п╦п╡п╟я▌я┴п╟я▐ я│п╪п╣п╫п╫я▀п╣ п╫п╬я│п╦я┌п╣п╩п╦ п╦п╥ п╫п╟п╨п╬п©п╦я┌п╣п╩п╣п╧
+Summary(tr.UTF-8):   Eject yeteneд÷i olan aygд╠tlarд╠ kontrol eder
+Summary(uk.UTF-8):   п÷я─п╬пЁя─п╟п╪п╟, я┴п╬ п╡п╦я┬я┌п╬п╡я┘я┐я■ п╥п╪я√п╫п╫я√ п╫п╬я│я√я≈ п╥ п╫п╟п╨п╬п©п╦я┤я┐п╡п╟я┤я√п╡
 Name:		eject
 Version:	2.1.5
 Release:	2
@@ -30,44 +30,44 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This program allows the user to eject media that is autoejecting like
 CD-ROMs, Jaz and Zip drives, and floppy drives on SPARC machines.
 
-%description -l de
-Dieses Programm ermЖglicht auf SPARC-Rechnern das Auswerfen von
-DatentrДgern wie CD-ROMs, Jaz-, Zip- und Floppy-Disketten, die
+%description -l de.UTF-8
+Dieses Programm ermц╤glicht auf SPARC-Rechnern das Auswerfen von
+Datentrц╓gern wie CD-ROMs, Jaz-, Zip- und Floppy-Disketten, die
 normalerweise automatisch ausgeworfen werden.
 
-%description -l es
+%description -l es.UTF-8
 Este programa permite al usuario expulsar media que es autoexpulsable
-como CD-ROMs, drives Jaz y Zip y floppy drives en mАquinas SPARC.
+como CD-ROMs, drives Jaz y Zip y floppy drives en mц║quinas SPARC.
 
-%description -l fr
-Ce programme permet Ю l'utilisateur d'Иjecter un support autoИjectable
+%description -l fr.UTF-8
+Ce programme permet ц═ l'utilisateur d'ц╘jecter un support autoц╘jectable
 comme les CD-ROM, les lecteurs Zip et Jaz, et les disquettes sur les
 SPARC.
 
-%description -l pl
-Program do automatycznego otwierania szuflad w urz╠dzeniach CDROM,
+%description -l pl.UTF-8
+Program do automatycznego otwierania szuflad w urzд┘dzeniach CDROM,
 Jaz, ZIP floppy (na maszynach SPARC) oraz innych.
 
-%description -l pt_BR
-Este programa permite ao usuАrio ejetar mМdia que И auto-ejetАvel como
-CD-ROMs, drives Jaz e Zip e floppy drives em mАquinas SPARC.
+%description -l pt_BR.UTF-8
+Este programa permite ao usuц║rio ejetar mц╜dia que ц╘ auto-ejetц║vel como
+CD-ROMs, drives Jaz e Zip e floppy drives em mц║quinas SPARC.
 
-%description -l ru
-Эта программа позволяет пользователю выталкивать сменные носители из
-накопителей, поддерживающих программный eject (такие как CD-ROMы,
-Iomega Jaz или Zip диски, флоппи-диски на SPARC-машинах). Eject может
-также управлять некоторыми CD ченджерами.
+%description -l ru.UTF-8
+п╜я┌п╟ п©я─п╬пЁя─п╟п╪п╪п╟ п©п╬п╥п╡п╬п╩я▐п╣я┌ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▌ п╡я▀я┌п╟п╩п╨п╦п╡п╟я┌я▄ я│п╪п╣п╫п╫я▀п╣ п╫п╬я│п╦я┌п╣п╩п╦ п╦п╥
+п╫п╟п╨п╬п©п╦я┌п╣п╩п╣п╧, п©п╬п╢п╢п╣я─п╤п╦п╡п╟я▌я┴п╦я┘ п©я─п╬пЁя─п╟п╪п╪п╫я▀п╧ eject (я┌п╟п╨п╦п╣ п╨п╟п╨ CD-ROMя▀,
+Iomega Jaz п╦п╩п╦ Zip п╢п╦я│п╨п╦, я└п╩п╬п©п©п╦-п╢п╦я│п╨п╦ п╫п╟ SPARC-п╪п╟я┬п╦п╫п╟я┘). Eject п╪п╬п╤п╣я┌
+я┌п╟п╨п╤п╣ я┐п©я─п╟п╡п╩я▐я┌я▄ п╫п╣п╨п╬я┌п╬я─я▀п╪п╦ CD я┤п╣п╫п╢п╤п╣я─п╟п╪п╦.
 
-%description -l tr
-Bu yazЩlЩm paketi ile kullanЩcЩya 'eject' yeteneПi olan aygЩtlarЩ
-kontrol olanaПЩ verilmektedir. Bu yeteneПi olan aygЩtlar arasЩnda
-CD-ROM'lar, Zip sЭrЭcЭleri ve bazЩ disket sЭrЭcЭleri yer alЩr.
+%description -l tr.UTF-8
+Bu yazд╠lд╠m paketi ile kullanд╠cд╠ya 'eject' yeteneд÷i olan aygд╠tlarд╠
+kontrol olanaд÷д╠ verilmektedir. Bu yeteneд÷i olan aygд╠tlar arasд╠nda
+CD-ROM'lar, Zip sц╪rц╪cц╪leri ve bazд╠ disket sц╪rц╪cц╪leri yer alд╠r.
 
-%description -l uk
-Ця програма дозволя╓ користувачев╕ виштовхувати зм╕нн╕ нос╕╖ з
-накопичувач╕в, що п╕дтримують програмний eject (так╕ як CD-ROMи,
-Iomega Jaz чи Zip диски, флоп╕-диски на SPARC-машинах). Eject може
-також управляти деякими CD ченджерами
+%description -l uk.UTF-8
+п╕я▐ п©я─п╬пЁя─п╟п╪п╟ п╢п╬п╥п╡п╬п╩я▐я■ п╨п╬я─п╦я│я┌я┐п╡п╟я┤п╣п╡я√ п╡п╦я┬я┌п╬п╡я┘я┐п╡п╟я┌п╦ п╥п╪я√п╫п╫я√ п╫п╬я│я√я≈ п╥
+п╫п╟п╨п╬п©п╦я┤я┐п╡п╟я┤я√п╡, я┴п╬ п©я√п╢я┌я─п╦п╪я┐я▌я┌я▄ п©я─п╬пЁя─п╟п╪п╫п╦п╧ eject (я┌п╟п╨я√ я▐п╨ CD-ROMп╦,
+Iomega Jaz я┤п╦ Zip п╢п╦я│п╨п╦, я└п╩п╬п©я√-п╢п╦я│п╨п╦ п╫п╟ SPARC-п╪п╟я┬п╦п╫п╟я┘). Eject п╪п╬п╤п╣
+я┌п╟п╨п╬п╤ я┐п©я─п╟п╡п╩я▐я┌п╦ п╢п╣я▐п╨п╦п╪п╦ CD я┤п╣п╫п╢п╤п╣я─п╟п╪п╦
 
 %prep
 %setup -q -n %{name}
