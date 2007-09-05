@@ -9,7 +9,7 @@ Summary(tr.UTF-8):	Eject yeteneği olan aygıtları kontrol eder
 Summary(uk.UTF-8):	Програма, що виштовхує змінні носії з накопичувачів
 Name:		eject
 Version:	2.1.5
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/System
 Source0:	http://ca.geocities.com/jefftranter@rogers.com/eject-2.1.5.tar.gz
