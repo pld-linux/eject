@@ -9,10 +9,10 @@ Summary(tr.UTF-8):	Eject yeteneği olan aygıtları kontrol eder
 Summary(uk.UTF-8):	Програма, що виштовхує змінні носії з накопичувачів
 Name:		eject
 Version:	2.1.5
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/System
-Source0:	http://ca.geocities.com/jefftranter@rogers.com/eject-2.1.5.tar.gz
+Source0:	http://ca.geocities.com/jefftranter@rogers.com/%{name}-%{version}.tar.gz
 # Source0-md5:	b96a6d4263122f1711db12701d79f738
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	dd66d948c94fe0f0b4483c51873e6e20
@@ -20,7 +20,13 @@ Source2:	%{name}-pl.po
 Patch0:		%{name}-gettext.patch
 Patch1:		%{name}-po.patch
 Patch2:		%{name}-symlink.patch
-URL:		http://ca.geocities.com/jefftranter@rogers.com/eject.html
+Patch3:		verbose.patch
+Patch4:		lock.patch
+Patch5:		opendevice.patch
+Patch6:		spaces.patch
+Patch7:		timeout.patch
+Patch8:		umount.patch
+URL:		http://sites.google.com/site/tranter/software
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel >= 0.15
@@ -74,6 +80,12 @@ Iomega Jaz чи Zip диски, флопі-диски на SPARC-машинах)
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
+%patch4 -p1
+%patch5 -p1
+%patch6 -p1
+%patch7 -p1
+%patch8 -p1
 
 # standardize locale names
 mv -f po/{cs_CZ,cs}.po
@@ -99,11 +111,11 @@ printf "eject.c\ni18n.h\nvolname.c\n" >> po/POTFILES.in
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
+%{__rm} $RPM_BUILD_ROOT%{_mandir}/README.eject-non-english-man-pages
 
 %find_lang %{name}
 
@@ -113,9 +125,12 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS PORTING PROBLEMS README TODO
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*
-%lang(fi) %{_mandir}/fi/man1/*
-%lang(hu) %{_mandir}/hu/man1/*
-%lang(ja) %{_mandir}/ja/man1/*
-%lang(pl) %{_mandir}/pl/man1/*
+%attr(755,root,root) %{_bindir}/eject
+%attr(755,root,root) %{_bindir}/volname
+%{_mandir}/man1/eject.1*
+%{_mandir}/man1/volname.1*
+%lang(fi) %{_mandir}/fi/man1/eject.1*
+%lang(hu) %{_mandir}/hu/man1/eject.1*
+%lang(ja) %{_mandir}/ja/man1/eject.1*
+%lang(ja) %{_mandir}/ja/man1/volname.1*
+%lang(pl) %{_mandir}/pl/man1/eject.1*
