@@ -29,7 +29,7 @@ Patch8:		umount.patch
 URL:		http://sites.google.com/site/tranter/software
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel >= 0.15
+BuildRequires:	gettext-tools >= 0.15
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
